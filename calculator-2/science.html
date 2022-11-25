@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Calculator!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <body id="good">
+    <!-- <script src="index.js"></script> -->
+
+    <!-- FIRST ELEMENT! -->
+    <div class="big">
+      <div id="print_hist" class="hiding_history brother first">history:</div>
+      <section class="container">
+        <button type="button" id="info" class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+            viewBox="0 0 256 256"
+            class="icon"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <circle
+              cx="128"
+              cy="128"
+              r="96"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></circle>
+            <polyline
+              points="120 120 128 120 128 176 136 176"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+            <circle cx="126" cy="84" r="12"></circle>
+          </svg>
+        </button>
+        <strong class="wider" id="calc_header">
+          nadav's_calculator!
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75
+            15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0
+            2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0
+            2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0
+            2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0
+            2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0
+            2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0
+            2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0
+            2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892
+            0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0
+            002.25 2.25h10.5a2.25 2.25 0
+            002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0
+            0012 2.25z"
+            ></path>
+          </svg>
+        </strong>
+
+        <button type="button" class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <circle
+              cx="128"
+              cy="128"
+              r="48"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></circle>
+            <path
+              d="M197.4,80.7a73.6,73.6,0,0,1,6.3,10.9L229.6,106a102,102,0,0,1,.1,44l-26,14.4a73.6,73.6,0,0,1-6.3,10.9l.5,29.7a104,104,0,0,1-38.1,22.1l-25.5-15.3a88.3,88.3,0,0,1-12.6,0L96.3,227a102.6,102.6,0,0,1-38.2-22l.5-29.6a80.1,80.1,0,0,1-6.3-11L26.4,150a102,102,0,0,1-.1-44l26-14.4a73.6,73.6,0,0,1,6.3-10.9L58.1,51A104,104,0,0,1,96.2,28.9l25.5,15.3a88.3,88.3,0,0,1,12.6,0L159.7,29a102.6,102.6,0,0,1,38.2,22Z"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></path>
+          </svg>
+        </button>
+
+        <button type="button" id="light" class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="88"
+              y1="232"
+              x2="168"
+              y2="232"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <path
+              d="M78.7,167A79.5,79.5,0,0,1,48,104.5C47.8,61.1,82.7,25,126.1,24a80,80,0,0,1,51.3,142.9A24.2,24.2,0,0,0,168,186v6a8,8,0,0,1-8,8H96a8,8,0,0,1-8-8v-6A24.4,24.4,0,0,0,78.7,167Z"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></path>
+            <path
+              d="M136.1,56.8a47.9,47.9,0,0,1,39.2,39.1"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></path>
+          </svg>
+        </button>
+        <strong class="wider" id="display_window"></strong>
+        <button type="button" id="back" class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="#000000"
+            viewBox="0 0 256 256"
+            id="back"
+          >
+            <rect width="256" height="256" fill="none" id="back"></rect>
+            <polyline
+              points="80 152 32 104 80 56"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+              id="back"
+            ></polyline>
+            <polyline
+              points="128 152 80 104 128 56"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+              id="back"
+            ></polyline>
+            <path
+              d="M224,200a96,96,0,0,0-96-96H80"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+              id="back"
+            ></path>
+          </svg>
+        </button>
+
+        <button id="history" type="button" class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="128"
+              y1="80"
+              x2="128"
+              y2="128"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="169.6"
+              y1="152"
+              x2="128"
+              y2="128"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="71.8 99.7 31.8 99.7 31.8 59.7"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+            <path
+              d="M65.8,190.2a88,88,0,1,0,0-124.4l-34,33.9"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></path>
+          </svg>
+        </button>
+        <button class="clear_screen wider button" id="delete" type="button">
+          C
+        </button>
+        <button id="operator" class="button">/</button>
+
+        <a href="index.html"
+          ><button type="button" id="innerbtn" class="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none"></rect>
+              <polyline
+                points="232 96 232 72 120 72 72 200 24 72"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polyline>
+            </svg></button
+        ></a>
+        <button type="button" id="number" class="button">7</button>
+        <button type="button" id="number" class="button">8</button>
+        <button type="button" id="number" class="button">9</button>
+        <button id="operator" class="button">X</button>
+
+        <button type="button" class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <path
+              d="M80,128a80,80,0,1,1,80,80H72A56,56,0,0,1,72,96a57.5,57.5,0,0,1,13.9,1.7"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></path>
+            <polyline
+              points="192 116 144 164 120 140"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+          </svg>
+        </button>
+        <button type="button" id="number" class="button">4</button>
+        <button type="button" id="number" class="button">5</button>
+        <button type="button" id="number" class="button">6</button>
+        <button id="operator" class="button">-</button>
+
+        <button type="button" class="button"></button>
+        <button type="button" id="number" class="button">1</button>
+        <button type="button" id="number" class="button">2</button>
+        <button type="button" id="number" class="button">3</button>
+        <button id="operator" class="button">+</button>
+
+        <button type="button" class="button"></button>
+        <button type="button" class="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="200"
+              y1="56"
+              x2="56"
+              y2="200"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="32"
+              y1="72"
+              x2="112"
+              y2="72"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="72"
+              y1="32"
+              x2="72"
+              y2="112"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="144"
+              y1="184"
+              x2="224"
+              y2="184"
+              fill="none"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+          </svg>
+        </button>
+        <button type="button" id="number" class="button">0</button>
+        <button type="button" id="number" class="button">.</button>
+        <button type="equal" class="button" id="equal">=</button>
+      </section>
+      <div class="brother second"><strong>bro2</strong></div>
+    </div>
+    <script src="application.js"></script>
+    <script src="calculation.js"></script>
+  </body>
+</html>

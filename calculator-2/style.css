@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+.button {
+  background-color: rgba(218, 155, 110, 0.65);
+}
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(40, 38, 38);
+  color: aliceblue;
+  transition: 0.3s ease-in-out;
+}
+
+body {
+  background-color: bisque;
+}
+
+.container {
+  border: solid 7.4px rgb(44, 28, 26);
+
+  display: grid;
+  width: 320px;
+  height: 347px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 115px;
+}
+
+.wider {
+  grid-column: 2/5;
+  justify-self: stretch;
+  padding: 10px;
+}
+#display_window {
+  /* padding-left: 17px;
+  padding-right: 17px; */
+  font-family: "Times New Roman", Times, serif;
+  display: inline;
+  justify-self: stretch;
+  align-self: stretch;
+  border: none;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+#calc_header {
+  background-color: rgba(122, 122, 66, 0.75);
+  border: 2px black solid;
+  justify-self: stretch;
+  align-self: stretch;
+  font-weight: bold;
+  font-size: medium;
+  justify-self: stretch;
+}
+
+.icon {
+  width: 14px;
+}
+
+strong {
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+  border-image: initial;
+}
+
+#equal {
+  background-color: rgba(40, 38, 38, 0.75);
+  color: aliceblue;
+}
+#equal:hover {
+  background-color: aliceblue;
+  color: rgba(40, 38, 38, 0.75);
+}
+
+.hidden {
+  background-color: red;
+}
+.hidden2 {
+  background-color: yellow;
+}
+.brother {
+  background-color: rgba(90, 67, 67, 0.5);
+  display: inline-block;
+  align-self: stretch;
+  height: 332px;
+  margin-top: 122px;
+  width: 100px;
+}
+.first {
+  justify-self: right;
+  align-self: baseline;
+  overflow-wrap: break-word;
+}
+
+.big {
+  display: grid;
+
+  grid-template-columns: auto 320px auto;
+}
+
+#innerbtn {
+  display: block;
+  height: 41.5px;
+  width: 45px;
+
+  border: 2px black solid;
+  padding: 24px 29.5px;
+}
+
+.good {
+  background-color: blue;
+}
+.hiding_history {
+  background-color: rgba(90, 67, 67, 0.5);
+  display: inline-block;
+  align-self: stretch;
+  height: 332px;
+  margin-top: 122px;
+  width: 100px;
+  font: rgba(90, 67, 67, 0.5);
+}
